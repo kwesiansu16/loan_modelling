@@ -1,0 +1,174 @@
+
+
+<!DOCTYPE html>
+
+<html>
+{% load static %}
+<head>
+<title>Loans</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+<link rel="stylesheet" href="{% static 'css/main.css' %}"/>
+
+
+</head>
+<body style="background-color:#181D2F;">
+<div class="jumbotron">
+  <h1 class="display-4">Loan Modelling Web App</h1>
+  <p class="lead">This Machine learning model ensures banks to know whether they should offer loans to prospective customers based on their present data</p>
+  <hr class="my-4">
+  <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+
+  <!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Description
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Loan Modelling Predciton</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        A web app to show whether customers in a given would be given access to loans based on their input data.
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+</div>
+<h2 style="color:#fffefe;margin-left:30px;">Loan Modelling App</h2>
+
+  <div class="container" style="margin-left:50px;margin-bottom:30px;">
+        <div class="row">
+            <div class="col-7">
+                <div class="card">
+               
+                    <div class="card-header">
+                        Loan Approval Form
+                    </div>
+                    <div class="card-body">
+                        <form  action="{% url 'result' %}">
+                          
+                       
+                            <div class="form-group">
+                            <fieldset>
+                              <legend style="float:right">Customer Age:</legend>
+                             
+                                <label for="name">Age</label>
+                                <input type="text" name="Age" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                             <legend style="float:right">Years of experience</legend>
+                                <label for="d">Experience</label>
+                                <input type="text" name="Experience" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                            <legend style="float:right">Income amount of Customer</legend>
+                                <label for="name">Income</label>
+                                <input type="text" name="Income" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                            <legend style="float:right">Family Size</legend>
+                                <label for="name">Family Size</label>
+                              <input name="Family" class="form-control" required>
+                            </div>
+                              <div class="form-group">
+                                 <legend style="float:right">Credit Card average</legend>
+                                <label for="name">CCAvg</label>
+                              <input name="CCAvg" class="form-control" required>
+                            </div>
+                             <div class="form-group">
+                              <legend style="float:right">Education Level  Shs:1 Undergrad:2 Masters:3</legend>
+                                <label for="name">Education</label>
+                              <input name="Education" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="name"> 	Mortgage</label>
+                              <input name="Mortgage" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                             <legend style="float:right">Securities account acquired:1 No security Account:0</legend>
+                                <label for="name">Securities Account</label>
+                              <input name="Securities Account" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                             <legend style="float:right">CD account acquired:1 No CD Account:0</legend>
+                                <label for="name">CD Account</label>
+                              <input name="CD Account" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                            <legend style="float:right">Customers using Online serices:1 Not accesing online services:0</legend>
+                                <label for="name">Online</label>
+                              <input name="Online" class="form-control" required>
+                            </div>
+                             <div class="form-group">
+                             <legend style="float:right">Customers with credit card:1 No Credit card acces:0</legend>
+                                <label for="name">CreditCard</label>
+                              <input name="CreditCard" class="form-control" required>
+                            </div>
+                            
+
+                            <input type="submit" class="btn btn-danger float-right" value="Test"/>
+                             
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- Button to Open the Modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+  Open modal
+</button>
+
+<!-- The Modal -->
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Modal Heading</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Modal body..
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
